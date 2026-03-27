@@ -46,7 +46,8 @@ namespace View.UI.Menu
 
         private void Restart()
         {
-            _sceneLoader.ChangeScene(Misc.Data.SceneConstants.MENU_SCENE);
+            string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+            _sceneLoader.ChangeScene(currentScene);
             CloseScreen();
         }
 
